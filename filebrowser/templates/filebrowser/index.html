@@ -24,6 +24,9 @@
     {% ifequal query.pop '3' %} <!-- CKeditor (former "FCKeditor") -->
     <script language="javascript" type="text/javascript" src="{{ settings_var.URL_FILEBROWSER_MEDIA }}js/FB_CKEditor.js"></script>
     {% endifequal %}
+    {% ifequal query.pop '4' %} <!-- Markdown -->
+    <script language="javascript" type="text/javascript" src="{{ settings_var.URL_FILEBROWSER_MEDIA }}js/FB_Markdown.js"></script>
+    {% endifequal %}
     {{ media }}
     
     {% if not actions_on_top and not actions_on_bottom %}
