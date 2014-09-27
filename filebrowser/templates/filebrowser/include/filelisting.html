@@ -41,6 +41,18 @@
             </td>
         {% endif %}
         
+        <!-- FILESELECT FOR MARKDOWN -->
+        {% if query.pop == "4" and results_var.select_total %}
+            <td class="fb_icon">
+                {% selectable file.filetype query.type %}
+                {% if selectable %}
+                    <button class="button fb_selectlink" onclick="FileSubmit('{{ file.url_save }}');">{% trans "Select" %}</button>
+                {% else %}
+                    &nbsp;
+                {% endif %}
+            </td>
+        {% endif %}
+        
         <!-- FILEICON -->
         <td>
             <img src="{{ settings_var.URL_FILEBROWSER_MEDIA }}img/filebrowser_type_{{ file.filetype|lower }}.gif" />
